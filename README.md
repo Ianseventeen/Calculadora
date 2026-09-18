@@ -7,8 +7,7 @@ Aplicação fullstack de calculadora minimalista desenvolvida para praticar conc
 ## 🎨 Design & Funcionalidades
 
 * **Visual Minimalista**: Interface inspirada na One UI da Samsung com tema em preto e branco.
-* **Entrada Híbrida**: Suporte a cliques nos botões da tela e atalhos pelo teclado físico (números, operadores, `Enter`, `Backspace` e `ESC`).
-* **Validação de Payload**: Verificação no backend para garantir que expressões vazias ou com caracteres inválidos sejam rejeitadas antes do cálculo.
+* **Validação de Payload**: Verificação no backend para garantir que expressões vazias ou com caracteres inválidos sejam rejeitadas antes do cálculo. (Validation API)
 * **Modal Informativo**: Botão de informação (`?`) no canto superior esquerdo com dados do projeto.
 
 ---
@@ -16,12 +15,14 @@ Aplicação fullstack de calculadora minimalista desenvolvida para praticar conc
 ## 🛠️ Tecnologias Utilizadas
 
 ### Backend
-* **Java 17+** / **Spring Boot 3**
+* **Java 25** / **Spring Boot 3**
 * **Spring Web** (Construção da API REST)
 * **Spring Boot Starter Validation** (Bean Validation com `@NotBlank` e `@Pattern`)
 * **Lombok** (Redução de código boilerplate)
+* **Gradle** (Gerenciamento de dependências e build)
 
 ### Frontend
+* **Frontend feito 100% com IA, com base nos meus gostos e conhecimento**
 * **HTML5** & **CSS3** (CSS Grid, Flexbox, efeitos de Blur e animações)
 * **JavaScript (ES6+)** (Requisições assíncronas via `fetch` API e manipulação do DOM)
 
@@ -54,7 +55,7 @@ Processa uma expressão matemática enviada pelo cliente e retorna o resultado.
 ## 🚀 Como Executar o Projeto
 
 ### Pré-requisitos
-* **JDK 17** ou superior instalado
+* **JDK 25** ou superior instalado
 * **Maven** configurado
 * Qualquer navegador web moderno
 
@@ -67,7 +68,7 @@ git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.co
 cd calculadora
 
 # Execute o servidor Spring Boot
-mvn spring-boot:run
+./gradlew bootRun
 ```
 O backend iniciará na porta `8080` (`http://localhost:8080`).
 
@@ -85,7 +86,7 @@ Abra o arquivo `index.html` diretamente no seu navegador ou utilize a extensão 
 │   │   ├── exception/           # Interceptador global de exceções (@RestControllerAdvice)
 │   │   ├── service/             # Lógica de avaliação e cálculo da expressão
 │   │   └── CalculationRequest.java # DTO com anotações de validação (@NotBlank, @Pattern)
-│   └── pom.xml
+│   └── build.gradle
 │
 └── frontend/
     ├── index.html               # Estrutura HTML da calculadora e do modal

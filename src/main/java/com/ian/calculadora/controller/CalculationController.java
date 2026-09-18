@@ -2,10 +2,12 @@ package com.ian.calculadora.controller;
 
 import com.ian.calculadora.CalculationRequest;
 import com.ian.calculadora.service.CalculationService;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/calculations")
+@CrossOrigin(origins = "*")
 public class CalculationController {
     private final CalculationService calculationService;
 
@@ -14,7 +16,7 @@ public class CalculationController {
     }
 
     @PostMapping("/calculate")
-    public String result(@RequestBody CalculationRequest request){
+    public String result(@Valid @RequestBody CalculationRequest request){
         return calculationService.calculate(request.getExpression());
     }
 

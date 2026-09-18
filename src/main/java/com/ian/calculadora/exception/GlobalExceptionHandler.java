@@ -17,4 +17,10 @@ public class GlobalExceptionHandler {
 
         return ResponseEntity.badRequest().body(mensagemErro);
     }
+
+    // 2. Captura a divisão por zero e operadores inválidos lançados pelo Service
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<String> handleIllegalArgumentException(IllegalArgumentException ex) {
+        return ResponseEntity.badRequest().body(ex.getMessage());
+    }
 }

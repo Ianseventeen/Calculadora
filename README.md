@@ -1,6 +1,6 @@
-# 🧮 Calculadora Web — Spring Boot & Vanilla UI
+# 🧮 Calculadora — Java + Spring Boot 
 
-Aplicação fullstack de calculadora minimalista desenvolvida para praticar conceitos de **Spring Boot**, **Jakarta Bean Validation**, tratamento global de exceções e integração com **JavaScript puro**.
+Bem vindo a minha calculadora! Esta é a minha aplicação fullstack de calculadora minimalista desenvolvida para praticar conceitos de **Spring Boot**, **Jakarta Bean Validation**, tratamento global de exceções e integração com **JavaScript puro**.
 
 ---
 
@@ -15,16 +15,19 @@ Aplicação fullstack de calculadora minimalista desenvolvida para praticar conc
 ## 🛠️ Tecnologias Utilizadas
 
 ### Backend
-* **Java 25** / **Spring Boot 3**
-* **Spring Web** (Construção da API REST)
-* **Spring Boot Starter Validation** (Bean Validation com `@NotBlank` e `@Pattern`)
-* **Lombok** (Redução de código boilerplate)
-* **Gradle** (Gerenciamento de dependências e build)
+## 🛠️ Tecnologias Utilizadas
+
+### Backend
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
+![Gradle](https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white)
+
+E também utilizei a **Jakarta Bean Validation** para validar o payload enviado pelo cliente, garantindo que expressões vazias ou com caracteres inválidos sejam rejeitadas antes do cálculo.
 
 ### Frontend
-* **Frontend feito 100% com IA, com base nos meus gostos e conhecimento**
-* **HTML5** & **CSS3** (CSS Grid, Flexbox, efeitos de Blur e animações)
-* **JavaScript (ES6+)** (Requisições assíncronas via `fetch` API e manipulação do DOM)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 ---
 
@@ -52,7 +55,7 @@ Processa uma expressão matemática enviada pelo cliente e retorna o resultado.
 
 ---
 
-## 🚀 Como Executar o Projeto
+## Como Executar o Projeto?
 
 ### Pré-requisitos
 * **JDK 25** ou superior instalado
